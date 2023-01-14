@@ -6,7 +6,6 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using GongSolutions.Wpf.DragDrop.Utilities;
-using JetBrains.Annotations;
 
 namespace GongSolutions.Wpf.DragDrop
 {
@@ -78,7 +77,7 @@ namespace GongSolutions.Wpf.DragDrop
         /// <param name="focusVisualTarget">if set to <c>true</c> the visual target will be focused.</param>
         /// <exception cref="System.ArgumentNullException"><paramref name="dropInfo" /> is <see langword="null" /></exception>
         /// <exception cref="System.ArgumentNullException"><paramref name="dropInfo" /> is <see langword="null" /></exception>
-        public static void SelectDroppedItems([NotNull] IDropInfo dropInfo, [NotNull] IEnumerable items, bool applyTemplate = true, bool focusVisualTarget = true)
+        public static void SelectDroppedItems(IDropInfo dropInfo, IEnumerable items, bool applyTemplate = true, bool focusVisualTarget = true)
         {
             if (dropInfo == null) throw new ArgumentNullException(nameof(dropInfo));
             if (items == null) throw new ArgumentNullException(nameof(items));

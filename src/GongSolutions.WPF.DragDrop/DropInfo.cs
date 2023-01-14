@@ -6,7 +6,6 @@ using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using GongSolutions.Wpf.DragDrop.Utilities;
-using JetBrains.Annotations;
 
 namespace GongSolutions.Wpf.DragDrop
 {
@@ -159,7 +158,7 @@ namespace GongSolutions.Wpf.DragDrop
         /// <param name="e">The drag event arguments.</param>
         /// <param name="dragInfo">Information about the drag source, if the drag came from within the framework.</param>
         /// <param name="eventType">The type of the underlying event (tunneled or bubbled).</param>
-        public DropInfo(object sender, DragEventArgs e, [CanBeNull] IDragInfo dragInfo, EventType eventType)
+        public DropInfo(object sender, DragEventArgs e, IDragInfo dragInfo, EventType eventType)
         {
             this.DragInfo = dragInfo;
             this.KeyStates = e.KeyStates;
